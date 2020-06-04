@@ -1,9 +1,9 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 function Header() {
   return (
     <div className="page">
-      <header tabIndex="0"><span className="logo-g">G</span><span className="logo-k">K</span></header>
+     <Link to='/'><header tabIndex="0"><span className="logo-g">G</span><span className="logo-k">K</span></header></Link>
       <div id="nav-container">
         <div className="bg"></div>
         <div className="button" tabIndex="0">
@@ -13,15 +13,15 @@ function Header() {
         </div>
         <div id="nav-content" tabIndex="0">
           <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Contact</a></li>
+            <li><Link to='/'>Home</Link></li>
+            <li><Link to='/about'>About</Link></li>
+            <li><Link to='/contact'>Contact</Link></li>
 
           </ul>
         </div>
       </div>
       <div className="bag">
-        <i className="fas fa-suitcase"></i>
+        <Link to='/'><i className="fas fa-suitcase"></i></Link>
       </div>
     </div>
   )

@@ -1,25 +1,37 @@
 import React from 'react';
 import './App.css';
-import Header from './Header';
-import Home from './Home';
+import Header from './components/Header';
 import {
-  BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
-import Menu from './Menu';
-import About from './About';
+import Contact from './pages/Contact';
+import Products from './pages/Products';
+import About from './pages/About';
+import ProductDetail from './pages/ProductDetail';
+import Menu from './components/Menu'
+
+
 
 function App() {
   return (
     <div>
+      <Header />  
       <Switch>
-        <Route path='/'>
-          <Header />
-          <Menu />
-          <Home />
+        <Route exact path='/'>
+          <Menu/>
+          <Products />
         </Route>
+        <Route  path='/about'>
+          <About />
+        </Route>
+        <Route  path='/contact'>
+          <Contact />
+        </Route>
+        <Route path="/products/:productId">
+              <ProductDetail />
+        </Route>
+        
       </Switch>
     </div>
   )

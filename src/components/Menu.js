@@ -1,5 +1,4 @@
 import React from 'react';
-
 function Menu() {
     return (
         <div className="menucontainer">
@@ -12,18 +11,16 @@ function Menu() {
                 <button className="sizebutton">XXL</button>
             </div>
             <div className="found">
-                <p>15 products found</p>
+                15 product found
             </div>
             <div className="sortby">
-                <div className="custom-select">
                     <select className="orderselect">
                         <option value="0">Order By</option>
-                        <option value="1">lowest to highest</option>
-                        <option value="2">highest to lowest</option>
+                        <option value="lowest">lowest to highest</option>
+                        <option value="highest">highest to lowest</option>
                     </select>
                 </div>
             </div>
-        </div>
     )
 }
 export default Menu;
