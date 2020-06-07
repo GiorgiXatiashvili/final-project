@@ -1,8 +1,10 @@
-import React from "react"
+import React, { useContext } from "react"
 import { useParams } from "react-router-dom"
 import productsData from '../components/productsData';
+import {Consumer} from '../Context'
 
 function ProductDetail() {
+    const{addToCart} = useContext(Consumer)
     const { productId } = useParams()
     const thisProduct = productsData.find(prod => prod.id === productId)
 
@@ -21,7 +23,7 @@ function ProductDetail() {
                     <button className="sizebutton">XXL</button>
                 </div></span>
                 <span className='buttoncontainer'>
-                    <button className='detailbutton'>+ Add to cart</button>
+                    <button className='detailbutton' onClick={()=>addToCart(thisProduct)}>+ Add to cart</button>
                 </span>
             </div>
         </div>

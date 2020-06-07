@@ -9,29 +9,28 @@ import Contact from './pages/Contact';
 import Products from './pages/Products';
 import About from './pages/About';
 import ProductDetail from './pages/ProductDetail';
-import Menu from './components/Menu'
-
-
+import Cart from './pages/Cart';
 
 function App() {
   return (
     <div>
-      <Header />  
+      <Header />
       <Switch>
         <Route exact path='/'>
-          <Menu/>
           <Products />
         </Route>
-        <Route  path='/about'>
+        <Route path='/about'>
           <About />
         </Route>
-        <Route  path='/contact'>
+        <Route path='/contact'>
           <Contact />
         </Route>
         <Route path="/products/:productId">
-              <ProductDetail />
+          <ProductDetail />
         </Route>
-        
+        <Route  path="/cart">
+          <Cart />
+        </Route>
       </Switch>
     </div>
   )

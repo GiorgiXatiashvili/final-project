@@ -14,6 +14,8 @@ strong {
   font-weight: 700;
   letter-spacing: .03em;
   color: #212121;
+  display: flex;
+  justify-content: space-between;
 }
 
 header {
@@ -165,8 +167,9 @@ ul {
 }
 .bag{
     position: absolute;
-    top: 20px;
-    right: 14px;
+    top:20px;
+    right: 40px;
+    border: 0px solid black;
 }
 .logo-g{
     background-color: white;
@@ -187,8 +190,8 @@ ul {
     text-align: center;
 }
 .menucontainer{
-  width: 90%;
-  min-height: 100px;
+  width: 78%;
+  min-height: 65px;
   border: 0px solid black;
   display: flex;
   flex-direction: row;
@@ -217,7 +220,7 @@ ul {
 }
 .sizebutton{
   margin: 2px;
-  width: 28px;
+  width: 30px;
   height: 35px;
   color: black;
   background-color: white;
@@ -236,12 +239,12 @@ ul {
 }
 .orderselect{
   padding: 5px;
-  width: 170px;
-  height: 35px;
+  width: 180px;
+  height: 40px;
   border: 2px solid grey;
 }
 .productcontainer{
-  width: 92%;
+  width: 90%;
   border: 0px solid black;
   display: flex;
   flex-wrap: wrap;
@@ -250,19 +253,19 @@ ul {
 }
 .product{
   border: 0px solid black;
-  width: 21%;
-  min-height: 400px;
-  margin: 2%;
+  width: 20%;
+  min-height: 370px;
+  margin: 15px;
   display: flex;
   flex-direction: column;
   box-shadow: 0 0 10px rgb(206, 199, 199);
 }
 .productsimg{
   width: 100%;
-  height: 75%;
+  height: 70%;
 }
 .productsbutton{
-  height: 55px;
+  min-height: 50px;
   width: 90%;
   margin: 0 auto;
   background-color: white;
@@ -289,7 +292,7 @@ ul {
   margin-top: 10px;
   margin-bottom: 10px;
   font-weight: 900;
-  font-size: 18px;
+  font-size: 16px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 @media only screen and (max-width: 1500px){
@@ -301,6 +304,7 @@ ul {
     display: flex;
     flex-direction: column;
     box-shadow: 0 0 10px rgb(206, 199, 199);
+    font-size: 15px;
   }
   .name-price{
     display: flex;
@@ -397,11 +401,12 @@ ul {
   display: flex;
   padding: 40px;
   min-height: 400px;
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
 }
 .contactcontainer input{
   margin-top: 25px;
-  width: 300px;
+  width:350px;
   height: 35px;
   padding: 5px;
   border: 1px solid black;
@@ -417,7 +422,7 @@ ul {
 }
 .contactcontainer textarea{
   margin-top: 20px;
-  width: 100%;
+  width: 350px;
   height: 100px;
   border:1px solid rgb(0, 0, 0);
   box-shadow: 0 0 2px rgb(116, 110, 110);
@@ -485,17 +490,214 @@ ul {
   height: 55%;
   justify-content: flex-start;
   align-items: flex-end;
+  
 }
+.removebutt{
+  width: 130px;
+  border: 2px solid rgb(219, 4, 4);
+  color:rgb(219, 4, 4);
+  height: 40px;
+  cursor: pointer;
+  background-color: white;
+}
+.shoppingcard{
+  border: 0px solid black;
+  max-width:700px;
+  min-height: 170px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: 0 0 10px rgb(206, 199, 199);
+  margin: 15px;
+}
+
+.pressed{
+  background-color: black;
+  color: white;
+  margin: 1px;
+  width: 30px;
+  height: 35px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.unpressed {
+  background-color: white;
+  margin: 1px;
+  width: 30px;
+  height: 35px;
+  color: black;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 16px;
+}
+.cartcontainer{
+  border: 0px solid black;
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  min-height: 500px;
+  flex-wrap: wrap;
+  
+}
+
+.shoppingcard img{
+  width: 25%;
+  height: 100%;
+}
+
+.cartinfo{
+  display: flex;
+  flex-direction: column;
+  width: 34%;
+  flex-wrap: wrap;
+}
+.cartbuttcontainer{
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.cartbuttons{
+ border: 0px solid black;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ width: 140px;
+ margin-top: 10px;
+ flex-wrap: wrap;
+}
+.plusprod{
+  background-color: white;
+  border:none;
+  cursor: pointer;
+  font-weight: 500;;
+  font-size: 30px;
+  margin-top: 6px;
+  margin-right: 5px;
+}
+.minusprod{
+  background-color: white;
+  border:none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 30px;
+  margin-top: 2px;
+  margin-left: 6px;
+}
+.quantity{
+  font-size: 30px;
+}
+.carth{
+  margin-left: 50px;
+}
+.cartempty{
+  text-align: center;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carticon{
+  position: fixed;
+  font-size: 30px;
+  margin-right: 50px;
+}
+.cartlength{
+  position: absolute;
+  right: -33px;
+  top: -5px;
+  font-size: 13px;
+  color:white;
+  background-color: red;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+}
+.totalprice{
+  width: 100%;
+  font-size: 25px;
+}
+.totalprice hr{
+  color:black;
+  width: 220px;
+}
+
 @media only screen and (max-width: 600px){
   .product{
     border: 0px solid black;
-    width: 90%;
+    width: 95%;
     min-height: 400px;
-    margin: 35px;
+    margin: 15px;
     display: flex;
     flex-direction: column;
     box-shadow: 0 0 10px rgb(206, 199, 199);
   }
+  .contactcontainer{
+    border: 0px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .contactcontainer input{
+    margin-top: 25px;
+    max-width:350px;
+    height: 35px;
+    padding: 5px;
+    border: 1px solid black;
+    color: black;
+    border-radius: 1px;
+    box-shadow: 0 0 1px rgb(206, 199, 199);
+  }
+  
+  .contactcontainer textarea{
+    margin-top: 20px;
+    max-width: 350px;
+    height: 100px;
+    border: 0px solid rgb(0, 0, 0);
+    box-shadow: 0 0 2px rgb(116, 110, 110);
+    resize: none;
+    padding: 5px;
+  }
+  .detailscontainer{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items:center;
+  }
+  .detailscontainer img{
+    border: 0px solid black;
+    width:250px;
+    height: 150px;
+  }
+  .cartinfo{
+    font-size: 15px;
+  }
+  .cartprodname{
+    font-size: 15px;
+  }
+  .removebutt{
+    width:70px;
+    border: 2px solid rgb(219, 4, 4);
+    color:rgb(219, 4, 4);
+    height: 40px;
+    cursor: pointer;
+    background-color: white;
+    margin-right: 30px;
+  }
+  
 }
 input[type=submit] { 
   background:#ccc; 
@@ -504,3 +706,5 @@ input[type=submit] {
   background-color: rgb(48, 44, 44);
   color:white;
 }
+
+
